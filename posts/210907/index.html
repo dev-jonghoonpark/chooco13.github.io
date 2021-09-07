@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>210907 안드로이드 테스트 코드 작성하기 - chooco13</title>
+  <meta name="description" content="개발 한 걸 남겨보면 좋을 것 같아서 오늘부터 간단하게 남겨볼까 싶다.
+사실 지속성이 낮은 나라서 얼마나 오래갈지는 또 모르겠다.
+ 오랜만에 안드로이드 프로젝트를 해보고 있다. 테스트 코드의 필요성에 대한건 많이 들어봤고 느껴봤지만 실제로 작업을 할 기회가 많지가 않았다.
+항상 꼭 해봐야겠다 싶었는데 기간에 쫓겨서 하지 못한 경우가 많은 것 같다.
+그래서 이번에는 꼭 해봐야겠다는 생각으로 직접 진행해봤는데 막상 진행하려다보니 자료를 생각보다 찾기가 어려웠던것 같다.
+의존성은 이렇게 추가를 해주었다.
+사실 mockito는 아직 쓰지도 않는데 예전부터 들어왔던 터라 이번에 쓸일이 있지 않을까 싶어서 일단 넣어뒀다."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "chooco13",
+    
+    "url": "https:\/\/chooco13.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/chooco13.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/chooco13.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/chooco13.github.io\/posts\/210907\/",
+          "name": "210907 안드로이드 테스트 코드 작성하기"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "210907 안드로이드 테스트 코드 작성하기",
+  "description" : "개발 한 걸 남겨보면 좋을 것 같아서 오늘부터 간단하게 남겨볼까 싶다.\n사실 지속성이 낮은 나라서 얼마나 오래갈지는 또 모르겠다.\n 오랜만에 안드로이드 프로젝트를 해보고 있다. 테스트 코드의 필요성에 대한건 많이 들어봤고 느껴봤지만 실제로 작업을 할 기회가 많지가 않았다.\n항상 꼭 해봐야겠다 싶었는데 기간에 쫓겨서 하지 못한 경우가 많은 것 같다.\n그래서 이번에는 꼭 해봐야겠다는 생각으로 직접 진행해봤는데 막상 진행하려다보니 자료를 생각보다 찾기가 어려웠던것 같다.\n의존성은 이렇게 추가를 해주었다.\n사실 mockito는 아직 쓰지도 않는데 예전부터 들어왔던 터라 이번에 쓸일이 있지 않을까 싶어서 일단 넣어뒀다.",
+  "inLanguage" : "ko",
+  "wordCount":  326 ,
+  "datePublished" : "2021-09-07T17:13:39",
+  "dateModified" : "2021-09-07T17:13:39",
+  "image" : "https:\/\/chooco13.github.io",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/chooco13.github.io\/posts\/210907\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/chooco13.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/chooco13.github.io",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="210907 안드로이드 테스트 코드 작성하기" />
+<meta property="og:description" content="개발 한 걸 남겨보면 좋을 것 같아서 오늘부터 간단하게 남겨볼까 싶다.
+사실 지속성이 낮은 나라서 얼마나 오래갈지는 또 모르겠다.
+ 오랜만에 안드로이드 프로젝트를 해보고 있다. 테스트 코드의 필요성에 대한건 많이 들어봤고 느껴봤지만 실제로 작업을 할 기회가 많지가 않았다.
+항상 꼭 해봐야겠다 싶었는데 기간에 쫓겨서 하지 못한 경우가 많은 것 같다.
+그래서 이번에는 꼭 해봐야겠다는 생각으로 직접 진행해봤는데 막상 진행하려다보니 자료를 생각보다 찾기가 어려웠던것 같다.
+의존성은 이렇게 추가를 해주었다.
+사실 mockito는 아직 쓰지도 않는데 예전부터 들어왔던 터라 이번에 쓸일이 있지 않을까 싶어서 일단 넣어뒀다.">
+<meta property="og:url" content="https://chooco13.github.io/posts/210907/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="chooco13" />
+
+  <meta name="twitter:title" content="210907 안드로이드 테스트 코드 작성하기" />
+  <meta name="twitter:description" content="개발 한 걸 남겨보면 좋을 것 같아서 오늘부터 간단하게 남겨볼까 싶다.
+사실 지속성이 낮은 나라서 얼마나 오래갈지는 또 모르겠다.
+ 오랜만에 안드로이드 프로젝트를 해보고 있다. 테스트 코드의 필요성에 대한건 많이 들어봤고 느껴봤지만 실제로 작업을 할 기회가 많지가 않았다.
+항상 꼭 해봐야겠다 싶었는데 기간에 쫓겨서 하지 못한 경우가 많은 것 같다.
+그래서  …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.88.1" />
+  <link rel="alternate" href="https://chooco13.github.io/index.xml" type="application/rss+xml" title="chooco13"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://chooco13.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://chooco13.github.io/css/syntax.css" /><link rel="stylesheet" href="https://chooco13.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-72792143-9', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">네비게이션 토글</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://chooco13.github.io">chooco13</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-heading">
+              
+                <h1>210907 안드로이드 테스트 코드 작성하기</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>개발 한 걸 남겨보면 좋을 것 같아서 오늘부터 간단하게 남겨볼까 싶다.<br>
+사실 지속성이 낮은 나라서 얼마나 오래갈지는 또 모르겠다.</p>
+<hr>
+<p>오랜만에 안드로이드 프로젝트를 해보고 있다.
+테스트 코드의 필요성에 대한건 많이 들어봤고 느껴봤지만
+실제로 작업을 할 기회가 많지가 않았다.<br>
+항상 꼭 해봐야겠다 싶었는데 기간에 쫓겨서 하지 못한 경우가 많은 것 같다.</p>
+<p>그래서 이번에는 꼭 해봐야겠다는 생각으로 직접 진행해봤는데 막상 진행하려다보니 자료를 생각보다 찾기가 어려웠던것 같다.</p>
+<p>의존성은 이렇게 추가를 해주었다.<br>
+사실 mockito는 아직 쓰지도 않는데 예전부터 들어왔던 터라 이번에 쓸일이 있지 않을까 싶어서 일단 넣어뒀다.</p>
+<pre tabindex="0"><code>testImplementation 'junit:junit:4.13.2'
+testImplementation &quot;org.mockito:mockito-core:3.12.4&quot;
+androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+androidTestImplementation 'androidx.test:runner:1.4.0'
+androidTestImplementation 'androidx.test:rules:1.4.0'
+androidTestImplementation 'androidx.test:core:1.4.0'
+androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+androidTestImplementation 'androidx.test.espresso:espresso-intents:3.4.0'
+</code></pre><p>일단 insert하는 부분만 작성해보았다.</p>
+<pre tabindex="0"><code>@RunWith(AndroidJUnit4::class)
+@LargeTest
+class MainActivityTest {
+    @get:Rule
+    var activityScenarioRule: ActivityScenarioRule&lt;MainActivity&gt; = ActivityScenarioRule(MainActivity::class.java)
+
+    @Test
+    fun insertCustomer() {
+        onView(withId(R.id.fab)).perform(click())
+        onView(withId(R.id.edit_name)).perform(replaceText(&quot;테스트&quot;), closeSoftKeyboard())
+        onView(withId(R.id.edit_mobile)).perform(replaceText(&quot;01012341234&quot;), closeSoftKeyboard())
+        onView(withId(R.id.action_save)).perform(click())
+        onView(withId(R.id.customer_recyclerview)).check(RecyclerViewTestUtil.checkCount(2))
+
+        // TODO 추후 데이터 검증 필요
+    }
+}
+</code></pre><p>화면을 구성하는 fragment가 계속 변경되는데 이게 영향을 미칠까 싶었지만 생각외로 문제없이 잘 동작하였다.</p>
+<p>인터넷에는 activityScenario 예제가 많은데 activityScenario가 deprecated 된 것 같아 ActivityScenarioRule로 진행하였다.
+큰 차이는 없다는것 같다.</p>
+<p>처음에는 외국 예제를 보고 perform 부분에서 typeText 를 사용해 보려고 했는데<br>
+replaceText가 아닌 typeText를 사용하면<br>
+<code>Failed to get key events for string xxx(한글) (i.e. current IME does not understand how to translate the string into key events)</code><br>
+이런 에러가 발생 된다<br>
+replaceText를 쓰는것 말고는 espresso 에서는 해결 방법이 크게 없는것 같다. 크게 테스트에 지장도 없다.</p>
+<p>insert가 정상적으로 되었는지는 RecyclerView 의 카운트를 체크해주면 되지 않을까 싶어서 인터넷에서 방법을 찾아서 진행했다.<br>
+<a href="https://stackoverflow.com/questions/36399787/how-to-count-recyclerview-items-with-espresso">https://stackoverflow.com/questions/36399787/how-to-count-recyclerview-items-with-espresso</a><br>
+위 예제를 참고했고 추후에 리사이클러와 관련된 함수가 늘어날 것 같아서 유틸 형태로 만들었다.</p>
+<pre tabindex="0"><code>class RecyclerViewTestUtil {
+    companion object {
+        fun checkCount(expectedCount: Int) : ViewAssertion {
+            return RecyclerViewItemCountAssertion(expectedCount)
+        }
+    }
+}
+</code></pre><pre tabindex="0"><code>class RecyclerViewItemCountAssertion(private val expectedCount: Int) : ViewAssertion {
+    override fun check(view: View, noViewFoundException: NoMatchingViewException?) {
+        if (noViewFoundException != null) {
+            throw noViewFoundException
+        }
+        val recyclerView = view as RecyclerView
+        val adapter = recyclerView.adapter
+        assertThat(adapter!!.itemCount, `is`(expectedCount))
+    }
+}
+</code></pre><p>insert를 테스트 하다 보니 room을 통해 삽입된 데이터가 DB에 남게 되는데 이 문제는 in-memory 방식으로 DB 생성을 해주면 된다는 것 같다.</p>
+<p>좀 더 알아봐야 할 것 같다</p>
+
+
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://chooco13.github.io">chooco13</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.88.1</a> 을 사용함 &nbsp;&bull;&nbsp; <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> 를 개조한 <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> 테마
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://chooco13.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://chooco13.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
