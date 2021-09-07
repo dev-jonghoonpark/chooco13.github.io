@@ -177,6 +177,52 @@ if (!doNotTrack) {
         <div class="posts-list">
           
             <article class="post-preview">
+    <a href="https://chooco13.github.io/posts/210907-2/">
+        <h2 class="post-title">210907 actions-hugo 이용해서 배포 자동화 중 생긴 이슈</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>블로그 작성하는것도 쉽지 않다.<br>
+<code>actions-hugo</code> 를 이용해서 commit이 있을 경우 ./public 폴더의 내용만 따로 <code>gh-pages</code> 브랜치에 배포되도록 처리하였다.</p>
+<p>그런데 로컬에서는 문제없이 잘 되는데
+이상하게 <code>actions-hugo</code>를 거치면 메인 화면이 계속 깨지는 현상이 있었다.</p>
+<p><img src="/images/210908-2-minify.png" alt="minify image"></p>
+<p>이 문제를 해결하기 위해 github actions 설정 파일과 배포 로그를 살펴보았더니 명령어에 <code>--minify</code> 옵션이 들어가 있던걸 볼 수 있었다.<br>
+이유는 모르겠지만 minify 옵션을 처리하는 중 깨지는 이슈가 있는듯&hellip;<br>
+해당 옵션을 빼주니깐 글이 잘 보인다.</p>
+<p><img src="/images/210908-2-original.png" alt="original image"></p>
+<p>minify 옵션이 있는게 좀 더 가볍긴 하겠지만 깨지는것보다는 나으니깐 그냥 배포하는걸로 하렵니다</p>
+
+        
+    </div>
+
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="https://chooco13.github.io/posts/210907/">
         <h2 class="post-title">210907 안드로이드 테스트 코드 작성하기</h2>
         

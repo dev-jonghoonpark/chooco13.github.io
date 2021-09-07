@@ -7,14 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>210907 안드로이드 테스트 코드 작성하기 - chooco13</title>
-  <meta name="description" content="개발 한 걸 남겨보면 좋을 것 같아서 오늘부터 간단하게 남겨볼까 싶다.
-사실 지속성이 낮은 나라서 얼마나 오래갈지는 또 모르겠다.
- 오랜만에 안드로이드 프로젝트를 해보고 있다. 테스트 코드의 필요성에 대한건 많이 들어봤고 느껴봤지만 실제로 작업을 할 기회가 많지가 않았다.
-항상 꼭 해봐야겠다 싶었는데 기간에 쫓겨서 하지 못한 경우가 많은 것 같다.
-그래서 이번에는 꼭 해봐야겠다는 생각으로 직접 진행해봤는데 막상 진행하려다보니 자료를 생각보다 찾기가 어려웠던것 같다.
-의존성은 이렇게 추가를 해주었다.
-사실 mockito는 아직 쓰지도 않는데 예전부터 들어왔던 터라 이번에 쓸일이 있지 않을까 싶어서 일단 넣어뒀다."><script type="application/ld+json">
+  <title>210907 actions-hugo 이용해서 배포 자동화 중 생긴 이슈 - chooco13</title>
+  <meta name="description" content="블로그 작성하는것도 쉽지 않다.
+actions-hugo 를 이용해서 commit이 있을 경우 ./public 폴더의 내용만 따로 gh-pages 브랜치에 배포되도록 처리하였다.
+그런데 로컬에서는 문제없이 잘 되는데 이상하게 actions-hugo를 거치면 메인 화면이 계속 깨지는 현상이 있었다.
+이 문제를 해결하기 위해 github actions 설정 파일과 배포 로그를 살펴보았더니 명령어에 --minify 옵션이 들어가 있던걸 볼 수 있었다.
+이유는 모르겠지만 minify 옵션을 처리하는 중 깨지는 이슈가 있는듯&hellip;
+해당 옵션을 빼주니깐 글이 잘 보인다.
+minify 옵션이 있는게 좀 더 가볍긴 하겠지만 깨지는것보다는 나으니깐 그냥 배포하는걸로 하렵니다"><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -49,8 +49,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/chooco13.github.io\/posts\/210907\/",
-          "name": "210907 안드로이드 테스트 코드 작성하기"
+          "@id": "https:\/\/chooco13.github.io\/posts\/210907-2\/",
+          "name": "210907 actions hugo 이용해서 배포 자동화 중 생긴 이슈"
         }
     }]
 }
@@ -61,15 +61,15 @@
   "author": {
     "name" : ""
   },
-  "headline": "210907 안드로이드 테스트 코드 작성하기",
-  "description" : "개발 한 걸 남겨보면 좋을 것 같아서 오늘부터 간단하게 남겨볼까 싶다.\n사실 지속성이 낮은 나라서 얼마나 오래갈지는 또 모르겠다.\n 오랜만에 안드로이드 프로젝트를 해보고 있다. 테스트 코드의 필요성에 대한건 많이 들어봤고 느껴봤지만 실제로 작업을 할 기회가 많지가 않았다.\n항상 꼭 해봐야겠다 싶었는데 기간에 쫓겨서 하지 못한 경우가 많은 것 같다.\n그래서 이번에는 꼭 해봐야겠다는 생각으로 직접 진행해봤는데 막상 진행하려다보니 자료를 생각보다 찾기가 어려웠던것 같다.\n의존성은 이렇게 추가를 해주었다.\n사실 mockito는 아직 쓰지도 않는데 예전부터 들어왔던 터라 이번에 쓸일이 있지 않을까 싶어서 일단 넣어뒀다.",
+  "headline": "210907 actions-hugo 이용해서 배포 자동화 중 생긴 이슈",
+  "description" : "블로그 작성하는것도 쉽지 않다.\nactions-hugo 를 이용해서 commit이 있을 경우 .\/public 폴더의 내용만 따로 gh-pages 브랜치에 배포되도록 처리하였다.\n그런데 로컬에서는 문제없이 잘 되는데 이상하게 actions-hugo를 거치면 메인 화면이 계속 깨지는 현상이 있었다.\n이 문제를 해결하기 위해 github actions 설정 파일과 배포 로그를 살펴보았더니 명령어에 --minify 옵션이 들어가 있던걸 볼 수 있었다.\n이유는 모르겠지만 minify 옵션을 처리하는 중 깨지는 이슈가 있는듯\u0026hellip;\n해당 옵션을 빼주니깐 글이 잘 보인다.\nminify 옵션이 있는게 좀 더 가볍긴 하겠지만 깨지는것보다는 나으니깐 그냥 배포하는걸로 하렵니다",
   "inLanguage" : "ko",
-  "wordCount":  326 ,
+  "wordCount":  78 ,
   "datePublished" : "2021-09-07T17:13:39",
   "dateModified" : "2021-09-07T17:13:39",
   "image" : "https:\/\/chooco13.github.io",
   "keywords" : [ "" ],
-  "mainEntityOfPage" : "https:\/\/chooco13.github.io\/posts\/210907\/",
+  "mainEntityOfPage" : "https:\/\/chooco13.github.io\/posts\/210907-2\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/chooco13.github.io",
@@ -83,24 +83,23 @@
 }
 </script>
 
-<meta property="og:title" content="210907 안드로이드 테스트 코드 작성하기" />
-<meta property="og:description" content="개발 한 걸 남겨보면 좋을 것 같아서 오늘부터 간단하게 남겨볼까 싶다.
-사실 지속성이 낮은 나라서 얼마나 오래갈지는 또 모르겠다.
- 오랜만에 안드로이드 프로젝트를 해보고 있다. 테스트 코드의 필요성에 대한건 많이 들어봤고 느껴봤지만 실제로 작업을 할 기회가 많지가 않았다.
-항상 꼭 해봐야겠다 싶었는데 기간에 쫓겨서 하지 못한 경우가 많은 것 같다.
-그래서 이번에는 꼭 해봐야겠다는 생각으로 직접 진행해봤는데 막상 진행하려다보니 자료를 생각보다 찾기가 어려웠던것 같다.
-의존성은 이렇게 추가를 해주었다.
-사실 mockito는 아직 쓰지도 않는데 예전부터 들어왔던 터라 이번에 쓸일이 있지 않을까 싶어서 일단 넣어뒀다.">
-<meta property="og:url" content="https://chooco13.github.io/posts/210907/" />
+<meta property="og:title" content="210907 actions-hugo 이용해서 배포 자동화 중 생긴 이슈" />
+<meta property="og:description" content="블로그 작성하는것도 쉽지 않다.
+actions-hugo 를 이용해서 commit이 있을 경우 ./public 폴더의 내용만 따로 gh-pages 브랜치에 배포되도록 처리하였다.
+그런데 로컬에서는 문제없이 잘 되는데 이상하게 actions-hugo를 거치면 메인 화면이 계속 깨지는 현상이 있었다.
+이 문제를 해결하기 위해 github actions 설정 파일과 배포 로그를 살펴보았더니 명령어에 --minify 옵션이 들어가 있던걸 볼 수 있었다.
+이유는 모르겠지만 minify 옵션을 처리하는 중 깨지는 이슈가 있는듯&hellip;
+해당 옵션을 빼주니깐 글이 잘 보인다.
+minify 옵션이 있는게 좀 더 가볍긴 하겠지만 깨지는것보다는 나으니깐 그냥 배포하는걸로 하렵니다">
+<meta property="og:url" content="https://chooco13.github.io/posts/210907-2/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="chooco13" />
 
-  <meta name="twitter:title" content="210907 안드로이드 테스트 코드 작성하기" />
-  <meta name="twitter:description" content="개발 한 걸 남겨보면 좋을 것 같아서 오늘부터 간단하게 남겨볼까 싶다.
-사실 지속성이 낮은 나라서 얼마나 오래갈지는 또 모르겠다.
- 오랜만에 안드로이드 프로젝트를 해보고 있다. 테스트 코드의 필요성에 대한건 많이 들어봤고 느껴봤지만 실제로 작업을 할 기회가 많지가 않았다.
-항상 꼭 해봐야겠다 싶었는데 기간에 쫓겨서 하지 못한 경우가 많은 것 같다.
-그래서  …">
+  <meta name="twitter:title" content="210907 actions-hugo 이용해서 배포 자동화 중 생긴 이슈" />
+  <meta name="twitter:description" content="블로그 작성하는것도 쉽지 않다.
+actions-hugo 를 이용해서 commit이 있을 경우 ./public 폴더의 내용만 따로 gh-pages 브랜치에 배포되도록 처리하였다.
+그런데 로컬에서는 문제없이 잘 되는데 이상하게 actions-hugo를 거치면 메인 화면이 계속 깨지는 현상이 있었다.
+이 문제를 해결하기 위해 github actions 설정 파일 …">
   <meta name="twitter:card" content="summary" />
   <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://chooco13.github.io/index.xml" type="application/rss+xml" title="chooco13"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
@@ -221,7 +220,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="posts-heading">
               
-                <h1>210907 안드로이드 테스트 코드 작성하기</h1>
+                <h1>210907 actions-hugo 이용해서 배포 자동화 중 생긴 이슈</h1>
               
               
                 <hr class="small">
@@ -241,73 +240,16 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>개발 한 걸 남겨보면 좋을 것 같아서 오늘부터 간단하게 남겨볼까 싶다.<br>
-사실 지속성이 낮은 나라서 얼마나 오래갈지는 또 모르겠다.</p>
-<hr>
-<p>오랜만에 안드로이드 프로젝트를 해보고 있다.
-테스트 코드의 필요성에 대한건 많이 들어봤고 느껴봤지만
-실제로 작업을 할 기회가 많지가 않았다.<br>
-항상 꼭 해봐야겠다 싶었는데 기간에 쫓겨서 하지 못한 경우가 많은 것 같다.</p>
-<p>그래서 이번에는 꼭 해봐야겠다는 생각으로 직접 진행해봤는데 막상 진행하려다보니 자료를 생각보다 찾기가 어려웠던것 같다.</p>
-<p>의존성은 이렇게 추가를 해주었다.<br>
-사실 mockito는 아직 쓰지도 않는데 예전부터 들어왔던 터라 이번에 쓸일이 있지 않을까 싶어서 일단 넣어뒀다.</p>
-<pre tabindex="0"><code>testImplementation 'junit:junit:4.13.2'
-testImplementation &quot;org.mockito:mockito-core:3.12.4&quot;
-androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-androidTestImplementation 'androidx.test:runner:1.4.0'
-androidTestImplementation 'androidx.test:rules:1.4.0'
-androidTestImplementation 'androidx.test:core:1.4.0'
-androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-androidTestImplementation 'androidx.test.espresso:espresso-intents:3.4.0'
-</code></pre><p>일단 insert하는 부분만 작성해보았다.</p>
-<pre tabindex="0"><code>@RunWith(AndroidJUnit4::class)
-@LargeTest
-class MainActivityTest {
-    @get:Rule
-    var activityScenarioRule: ActivityScenarioRule&lt;MainActivity&gt; = ActivityScenarioRule(MainActivity::class.java)
-
-    @Test
-    fun insertCustomer() {
-        onView(withId(R.id.fab)).perform(click())
-        onView(withId(R.id.edit_name)).perform(replaceText(&quot;테스트&quot;), closeSoftKeyboard())
-        onView(withId(R.id.edit_mobile)).perform(replaceText(&quot;01012341234&quot;), closeSoftKeyboard())
-        onView(withId(R.id.action_save)).perform(click())
-        onView(withId(R.id.customer_recyclerview)).check(RecyclerViewTestUtil.checkCount(2))
-
-        // TODO 추후 데이터 검증 필요
-    }
-}
-</code></pre><p>화면을 구성하는 fragment가 계속 변경되는데 이게 영향을 미칠까 싶었지만 생각외로 문제없이 잘 동작하였다.</p>
-<p>인터넷에는 activityScenario 예제가 많은데 activityScenario가 deprecated 된 것 같아 ActivityScenarioRule로 진행하였다.
-큰 차이는 없다는것 같다.</p>
-<p>처음에는 외국 예제를 보고 perform 부분에서 typeText 를 사용해 보려고 했는데<br>
-replaceText가 아닌 typeText를 사용하면<br>
-<code>Failed to get key events for string xxx(한글) (i.e. current IME does not understand how to translate the string into key events)</code><br>
-이런 에러가 발생 된다<br>
-replaceText를 쓰는것 말고는 espresso 에서는 해결 방법이 크게 없는것 같다. 크게 테스트에 지장도 없다.</p>
-<p>insert가 정상적으로 되었는지는 RecyclerView 의 카운트를 체크해주면 되지 않을까 싶어서 인터넷에서 방법을 찾아서 진행했다.<br>
-<a href="https://stackoverflow.com/questions/36399787/how-to-count-recyclerview-items-with-espresso">https://stackoverflow.com/questions/36399787/how-to-count-recyclerview-items-with-espresso</a><br>
-위 예제를 참고했고 추후에 리사이클러와 관련된 함수가 늘어날 것 같아서 유틸 형태로 만들었다.</p>
-<pre tabindex="0"><code>class RecyclerViewTestUtil {
-    companion object {
-        fun checkCount(expectedCount: Int) : ViewAssertion {
-            return RecyclerViewItemCountAssertion(expectedCount)
-        }
-    }
-}
-</code></pre><pre tabindex="0"><code>class RecyclerViewItemCountAssertion(private val expectedCount: Int) : ViewAssertion {
-    override fun check(view: View, noViewFoundException: NoMatchingViewException?) {
-        if (noViewFoundException != null) {
-            throw noViewFoundException
-        }
-        val recyclerView = view as RecyclerView
-        val adapter = recyclerView.adapter
-        assertThat(adapter!!.itemCount, `is`(expectedCount))
-    }
-}
-</code></pre><p>insert를 테스트 하다 보니 room을 통해 삽입된 데이터가 DB에 남게 되는데 이 문제는 in-memory 방식으로 DB 생성을 해주면 된다는 것 같다.</p>
-<p>좀 더 알아봐야 할 것 같다</p>
+        <p>블로그 작성하는것도 쉽지 않다.<br>
+<code>actions-hugo</code> 를 이용해서 commit이 있을 경우 ./public 폴더의 내용만 따로 <code>gh-pages</code> 브랜치에 배포되도록 처리하였다.</p>
+<p>그런데 로컬에서는 문제없이 잘 되는데
+이상하게 <code>actions-hugo</code>를 거치면 메인 화면이 계속 깨지는 현상이 있었다.</p>
+<p><img src="/images/210908-2-minify.png" alt="minify image"></p>
+<p>이 문제를 해결하기 위해 github actions 설정 파일과 배포 로그를 살펴보았더니 명령어에 <code>--minify</code> 옵션이 들어가 있던걸 볼 수 있었다.<br>
+이유는 모르겠지만 minify 옵션을 처리하는 중 깨지는 이슈가 있는듯&hellip;<br>
+해당 옵션을 빼주니깐 글이 잘 보인다.</p>
+<p><img src="/images/210908-2-original.png" alt="original image"></p>
+<p>minify 옵션이 있는게 좀 더 가볍긴 하겠지만 깨지는것보다는 나으니깐 그냥 배포하는걸로 하렵니다</p>
 
 
         
@@ -320,10 +262,10 @@ replaceText를 쓰는것 말고는 espresso 에서는 해결 방법이 크게 �
       
         <ul class="pager blog-pager">
           
-          
-            <li class="next">
-              <a href="https://chooco13.github.io/posts/210907-2/" data-toggle="tooltip" data-placement="top" title="210907 actions-hugo 이용해서 배포 자동화 중 생긴 이슈">다음 글 &rarr;</a>
+            <li class="previous">
+              <a href="https://chooco13.github.io/posts/210907/" data-toggle="tooltip" data-placement="top" title="210907 안드로이드 테스트 코드 작성하기">&larr; 이전 글</a>
             </li>
+          
           
         </ul>
       
