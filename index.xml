@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chooco13</title><link>https://chooco13.github.io/</link><description>Recent content on chooco13</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><atom:link href="https://chooco13.github.io/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chooco13</title>
+    <link>https://chooco13.github.io/</link>
+    <description>Recent content on chooco13</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 07 Sep 2021 17:13:39 +0900</lastBuildDate><atom:link href="https://chooco13.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>210907 안드로이드 테스트 코드 작성하기</title>
+      <link>https://chooco13.github.io/posts/210907/</link>
+      <pubDate>Tue, 07 Sep 2021 17:13:39 +0900</pubDate>
+      
+      <guid>https://chooco13.github.io/posts/210907/</guid>
+      <description>개발 한 걸 남겨보면 좋을 것 같아서 오늘부터 간단하게 남겨볼까 싶다.
+사실 지속성이 낮은 나라서 얼마나 오래갈지는 또 모르겠다.
+ 오랜만에 안드로이드 프로젝트를 해보고 있다. 테스트 코드의 필요성에 대한건 많이 들어봤고 느껴봤지만 실제로 작업을 할 기회가 많지가 않았다.
+항상 꼭 해봐야겠다 싶었는데 기간에 쫓겨서 하지 못한 경우가 많은 것 같다.
+그래서 이번에는 꼭 해봐야겠다는 생각으로 직접 진행해봤는데 막상 진행하려다보니 자료를 생각보다 찾기가 어려웠던것 같다.
+의존성은 이렇게 추가를 해주었다.
+사실 mockito는 아직 쓰지도 않는데 예전부터 들어왔던 터라 이번에 쓸일이 있지 않을까 싶어서 일단 넣어뒀다.</description>
+    </item>
+    
+  </channel>
+</rss>
