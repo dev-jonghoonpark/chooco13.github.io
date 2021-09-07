@@ -1,0 +1,6 @@
+baseurl = "https://chooco13.github.io"
+languageCode = 'ko-kr'
+DefaultContentLanguage = "ko"
+title = 'chooco13'
+theme = 'beautifulhugo'
+googleAnalytics = 'UA-72792143-9'
