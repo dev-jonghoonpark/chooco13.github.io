@@ -6,7 +6,21 @@
     <description>Recent content in Posts on chooco13</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 10 Sep 2021 17:13:39 +0900</lastBuildDate><atom:link href="https://chooco13.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Sep 2021 17:13:39 +0900</lastBuildDate><atom:link href="https://chooco13.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>210926 로그인 하려면 SMS 인증해야 하는 사이트 자동화 처리 해보기</title>
+      <link>https://chooco13.github.io/posts/210926/</link>
+      <pubDate>Sun, 26 Sep 2021 17:13:39 +0900</pubDate>
+      
+      <guid>https://chooco13.github.io/posts/210926/</guid>
+      <description>평소에 크롤링을 하던 사이트가 있는데
+ID, PW를 입력하는 방식에서 번호인증 방식으로 바뀌었다.
+그래서 어떻게 하면 자동화 해볼수 있을까 하다가 그냥 무식한 방법으로 진행 해보았다.
+  인증서버에 인증키를 요청한다. 그 후 토큰을 보관해 둔다. (나는 파이어베이스에다 보관해두었다.)
+  핸드폰에 온 인증을 안드로이드에서 브로드캐스트리시버를 통해 받은 후 본인의 서버에 인증번호를 보낸다.
+  class SMSReceiver : BroadcastReceiver() { override fun onReceive(context: Context?, intent: Intent) { if (intent.action.equals(Telephony.Sms.Intents.SMS_RECEIVED_ACTION)) { val smsMessages = Telephony.</description>
+    </item>
+    
     <item>
       <title>210910 리사이클러뷰에 롱클릭 이벤트 처리하기 (android - kotlin)</title>
       <link>https://chooco13.github.io/posts/210910/</link>

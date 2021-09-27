@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>github pages - chooco13</title><script type="application/ld+json">
+  <title>사이트 자동화 - chooco13</title><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -28,12 +28,12 @@
 }
 </script>
 
-<meta property="og:title" content="github pages" />
-<meta property="og:url" content="https://chooco13.github.io/tags/github-pages/" />
+<meta property="og:title" content="사이트 자동화" />
+<meta property="og:url" content="https://chooco13.github.io/tags/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%9E%90%EB%8F%99%ED%99%94/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="chooco13" />
 
-  <meta name="twitter:title" content="github pages" />
+  <meta name="twitter:title" content="사이트 자동화" />
   <meta name="twitter:card" content="summary" />
   <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://chooco13.github.io/index.xml" type="application/rss+xml" title="chooco13"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
@@ -154,7 +154,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="tags-heading">
               
-                <h1>github pages</h1>
+                <h1>사이트 자동화</h1>
               
               
                 <hr class="small">
@@ -177,8 +177,8 @@ if (!doNotTrack) {
         <div class="posts-list">
           
             <article class="post-preview">
-    <a href="https://chooco13.github.io/posts/210907-2/">
-        <h2 class="post-title">210907 actions-hugo 이용해서 배포 자동화 중 생긴 이슈</h2>
+    <a href="https://chooco13.github.io/posts/210926/">
+        <h2 class="post-title">210926 로그인 하려면 SMS 인증해야 하는 사이트 자동화 처리 해보기</h2>
         
         
         
@@ -188,7 +188,7 @@ if (!doNotTrack) {
         <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;2021년 9월 7일에 게시됨
+  <i class="fas fa-calendar"></i>&nbsp;2021년 9월 26일에 게시됨
   
   
   
@@ -204,32 +204,22 @@ if (!doNotTrack) {
     </p>
     <div class="post-entry">
         
-        actions-hugo 를 이용해서 commit이 있을 경우 ./public 폴더의 내용만 따로 gh-pages 브랜치에 배포되도록 처리하였다.
-그런데 로컬에서는 문제없이 잘 되는데 이상하게 actions-hugo를 거치면 메인 화면이 계속 깨지는 현상이 있었다.
-이 문제를 해결하기 위해 github actions 설정 파일과 배포 로그를 살펴보았더니 명령어에 --minify 옵션이 들어가 있던걸 볼 수 있었다.
-이유는 모르겠지만 minify 옵션을 처리하는 중 깨지는 이슈가 있는듯&hellip;
-해당 옵션을 빼주니깐 글이 잘 보인다.
-minify 옵션이 있는게 좀 더 가볍긴 하겠지만 깨지는것보다는 나으니깐 그냥 배포하는걸로 하렵니다&hellip;
-        <a href="https://chooco13.github.io/posts/210907-2/" class="post-read-more">[더 읽기]</a>
+        평소에 크롤링을 하던 사이트가 있는데
+ID, PW를 입력하는 방식에서 번호인증 방식으로 바뀌었다.
+그래서 어떻게 하면 자동화 해볼수 있을까 하다가 그냥 무식한 방법으로 진행 해보았다.
+  인증서버에 인증키를 요청한다. 그 후 토큰을 보관해 둔다. (나는 파이어베이스에다 보관해두었다.)
+  핸드폰에 온 인증을 안드로이드에서 브로드캐스트리시버를 통해 받은 후 본인의 서버에 인증번호를 보낸다.
+  class SMSReceiver : BroadcastReceiver() { override fun onReceive(context: Context?, intent: Intent) { if (intent.action.equals(Telephony.Sms.Intents.SMS_RECEIVED_ACTION)) { val smsMessages = Telephony.
+        <a href="https://chooco13.github.io/posts/210926/" class="post-read-more">[더 읽기]</a>
         
     </div>
 
     
     <div class="blog-tags">
         
-        <a href="https://chooco13.github.io/tags/hugo/">hugo</a>&nbsp;
+        <a href="https://chooco13.github.io/tags/sms-%EC%9D%B8%EC%A6%9D-%EC%9E%90%EB%8F%99%ED%99%94/">SMS 인증 자동화</a>&nbsp;
         
-        <a href="https://chooco13.github.io/tags/github-actions/">github actions</a>&nbsp;
-        
-        <a href="https://chooco13.github.io/tags/actions-hugo/">actions-hugo</a>&nbsp;
-        
-        <a href="https://chooco13.github.io/tags/gh-pages/">gh-pages</a>&nbsp;
-        
-        <a href="https://chooco13.github.io/tags/workflows/">workflows</a>&nbsp;
-        
-        <a href="https://chooco13.github.io/tags/github-pages/">github pages</a>&nbsp;
-        
-        <a href="https://chooco13.github.io/tags/minify/">minify</a>&nbsp;
+        <a href="https://chooco13.github.io/tags/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%9E%90%EB%8F%99%ED%99%94/">사이트 자동화</a>&nbsp;
         
     </div>
     

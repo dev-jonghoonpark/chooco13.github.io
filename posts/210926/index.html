@@ -7,11 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>210910 리사이클러뷰에 롱클릭 이벤트 처리하기 (android - kotlin) - chooco13</title>
-  <meta name="description" content="개발하면서 시안만 정리해두고 작성은 마무리 안해둬서 이제야 마무리 해서 작성&hellip;
-카카오톡처럼 리스트의 아이템을 롱클릭을 하면 팝업 메뉴가 뜨게 하고 싶었다
-어떻게 할까 하다가 결국은 그냥 viewholder에서 longclicklistener를 clicklistener와 나란히 사용해주었다.
-val customerAdapter = CustomerAdapter( { customer -&gt; adapterOnClick(customer) }, { customer -&gt; adapterOnLongClick(customer) } ) private fun adapterOnClick(customer: Customer) { // 기능 작성 } private fun adapterOnLongClick(customer: Customer): Boolean { // 기능 작성 // 일반적인 클릭도 처리할지 말지 정하는 부분 // false를 return 할경우 일반 클릭도 수행하도록 넘어감 return true } class CustomerAdapter(private val onClick: (Customer) -&gt; Unit, private val onLongClick: (Customer) -&gt; Boolean) : class ViewHolder(itemView: View, val onClick: (Customer) -&gt; Unit, val onLongClick: (Customer) -&gt; Boolean) : RecyclerView."><script type="application/ld+json">
+  <title>210926 로그인 하려면 SMS 인증해야 하는 사이트 자동화 처리 해보기 - chooco13</title>
+  <meta name="description" content="평소에 크롤링을 하던 사이트가 있는데
+ID, PW를 입력하는 방식에서 번호인증 방식으로 바뀌었다.
+그래서 어떻게 하면 자동화 해볼수 있을까 하다가 그냥 무식한 방법으로 진행 해보았다.
+  인증서버에 인증키를 요청한다. 그 후 토큰을 보관해 둔다. (나는 파이어베이스에다 보관해두었다.)
+  핸드폰에 온 인증을 안드로이드에서 브로드캐스트리시버를 통해 받은 후 본인의 서버에 인증번호를 보낸다.
+  class SMSReceiver : BroadcastReceiver() { override fun onReceive(context: Context?, intent: Intent) { if (intent.action.equals(Telephony.Sms.Intents.SMS_RECEIVED_ACTION)) { val smsMessages = Telephony."><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -46,8 +48,8 @@ val customerAdapter = CustomerAdapter( { customer -&gt; adapterOnClick(customer)
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/chooco13.github.io\/posts\/210910\/",
-          "name": "210910 리사이클러뷰에 롱클릭 이벤트 처리하기 (android kotlin)"
+          "@id": "https:\/\/chooco13.github.io\/posts\/210926\/",
+          "name": "210926 로그인 하려면 sms 인증해야 하는 사이트 자동화 처리 해보기"
         }
     }]
 }
@@ -58,15 +60,15 @@ val customerAdapter = CustomerAdapter( { customer -&gt; adapterOnClick(customer)
   "author": {
     "name" : ""
   },
-  "headline": "210910 리사이클러뷰에 롱클릭 이벤트 처리하기 (android - kotlin)",
-  "description" : "개발하면서 시안만 정리해두고 작성은 마무리 안해둬서 이제야 마무리 해서 작성\u0026hellip;\n카카오톡처럼 리스트의 아이템을 롱클릭을 하면 팝업 메뉴가 뜨게 하고 싶었다\n어떻게 할까 하다가 결국은 그냥 viewholder에서 longclicklistener를 clicklistener와 나란히 사용해주었다.\nval customerAdapter = CustomerAdapter( { customer -\u0026gt; adapterOnClick(customer) }, { customer -\u0026gt; adapterOnLongClick(customer) } ) private fun adapterOnClick(customer: Customer) { \/\/ 기능 작성 } private fun adapterOnLongClick(customer: Customer): Boolean { \/\/ 기능 작성 \/\/ 일반적인 클릭도 처리할지 말지 정하는 부분 \/\/ false를 return 할경우 일반 클릭도 수행하도록 넘어감 return true } class CustomerAdapter(private val onClick: (Customer) -\u0026gt; Unit, private val onLongClick: (Customer) -\u0026gt; Boolean) : class ViewHolder(itemView: View, val onClick: (Customer) -\u0026gt; Unit, val onLongClick: (Customer) -\u0026gt; Boolean) : RecyclerView.",
+  "headline": "210926 로그인 하려면 SMS 인증해야 하는 사이트 자동화 처리 해보기",
+  "description" : "평소에 크롤링을 하던 사이트가 있는데\nID, PW를 입력하는 방식에서 번호인증 방식으로 바뀌었다.\n그래서 어떻게 하면 자동화 해볼수 있을까 하다가 그냥 무식한 방법으로 진행 해보았다.\n  인증서버에 인증키를 요청한다. 그 후 토큰을 보관해 둔다. (나는 파이어베이스에다 보관해두었다.)\n  핸드폰에 온 인증을 안드로이드에서 브로드캐스트리시버를 통해 받은 후 본인의 서버에 인증번호를 보낸다.\n  class SMSReceiver : BroadcastReceiver() { override fun onReceive(context: Context?, intent: Intent) { if (intent.action.equals(Telephony.Sms.Intents.SMS_RECEIVED_ACTION)) { val smsMessages = Telephony.",
   "inLanguage" : "ko",
-  "wordCount":  146 ,
-  "datePublished" : "2021-09-10T17:13:39",
-  "dateModified" : "2021-09-10T17:13:39",
+  "wordCount":  191 ,
+  "datePublished" : "2021-09-26T17:13:39",
+  "dateModified" : "2021-09-26T17:13:39",
   "image" : "https:\/\/chooco13.github.io",
-  "keywords" : [ "리사이클러뷰, 안드로이드, 코틀린, 롱클릭, recyclerview, android, kotlin, longclick" ],
-  "mainEntityOfPage" : "https:\/\/chooco13.github.io\/posts\/210910\/",
+  "keywords" : [ "SMS 인증 자동화, 사이트 자동화" ],
+  "mainEntityOfPage" : "https:\/\/chooco13.github.io\/posts\/210926\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/chooco13.github.io",
@@ -80,20 +82,23 @@ val customerAdapter = CustomerAdapter( { customer -&gt; adapterOnClick(customer)
 }
 </script>
 
-<meta property="og:title" content="210910 리사이클러뷰에 롱클릭 이벤트 처리하기 (android - kotlin)" />
-<meta property="og:description" content="개발하면서 시안만 정리해두고 작성은 마무리 안해둬서 이제야 마무리 해서 작성&hellip;
-카카오톡처럼 리스트의 아이템을 롱클릭을 하면 팝업 메뉴가 뜨게 하고 싶었다
-어떻게 할까 하다가 결국은 그냥 viewholder에서 longclicklistener를 clicklistener와 나란히 사용해주었다.
-val customerAdapter = CustomerAdapter( { customer -&gt; adapterOnClick(customer) }, { customer -&gt; adapterOnLongClick(customer) } ) private fun adapterOnClick(customer: Customer) { // 기능 작성 } private fun adapterOnLongClick(customer: Customer): Boolean { // 기능 작성 // 일반적인 클릭도 처리할지 말지 정하는 부분 // false를 return 할경우 일반 클릭도 수행하도록 넘어감 return true } class CustomerAdapter(private val onClick: (Customer) -&gt; Unit, private val onLongClick: (Customer) -&gt; Boolean) : class ViewHolder(itemView: View, val onClick: (Customer) -&gt; Unit, val onLongClick: (Customer) -&gt; Boolean) : RecyclerView.">
-<meta property="og:url" content="https://chooco13.github.io/posts/210910/" />
+<meta property="og:title" content="210926 로그인 하려면 SMS 인증해야 하는 사이트 자동화 처리 해보기" />
+<meta property="og:description" content="평소에 크롤링을 하던 사이트가 있는데
+ID, PW를 입력하는 방식에서 번호인증 방식으로 바뀌었다.
+그래서 어떻게 하면 자동화 해볼수 있을까 하다가 그냥 무식한 방법으로 진행 해보았다.
+  인증서버에 인증키를 요청한다. 그 후 토큰을 보관해 둔다. (나는 파이어베이스에다 보관해두었다.)
+  핸드폰에 온 인증을 안드로이드에서 브로드캐스트리시버를 통해 받은 후 본인의 서버에 인증번호를 보낸다.
+  class SMSReceiver : BroadcastReceiver() { override fun onReceive(context: Context?, intent: Intent) { if (intent.action.equals(Telephony.Sms.Intents.SMS_RECEIVED_ACTION)) { val smsMessages = Telephony.">
+<meta property="og:url" content="https://chooco13.github.io/posts/210926/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="chooco13" />
 
-  <meta name="twitter:title" content="210910 리사이클러뷰에 롱클릭 이벤트 처리하기 (android - kotlin)" />
-  <meta name="twitter:description" content="개발하면서 시안만 정리해두고 작성은 마무리 안해둬서 이제야 마무리 해서 작성&hellip;
-카카오톡처럼 리스트의 아이템을 롱클릭을 하면 팝업 메뉴가 뜨게 하고 싶었다
-어떻게 할까 하다가 결국은 그냥 viewholder에서 longclicklistener를 clicklistener와 나란히 사용해주었다.
-val customerAdapter = …">
+  <meta name="twitter:title" content="210926 로그인 하려면 SMS 인증해야 하는 사이트 자동화 처리 해보기" />
+  <meta name="twitter:description" content="평소에 크롤링을 하던 사이트가 있는데
+ID, PW를 입력하는 방식에서 번호인증 방식으로 바뀌었다.
+그래서 어떻게 하면 자동화 해볼수 있을까 하다가 그냥 무식한 방법으로 진행 해보았다.
+  인증서버에 인증키를 요청한다. 그 후 토큰을 보관해 둔다. (나는 파이어베이스에다 보관해두었다.)
+  핸드폰에 온 인증을 안드로이드에서 브로드캐스트리시버를 통해 받은 후  …">
   <meta name="twitter:card" content="summary" />
   <meta name="generator" content="Hugo 0.88.1" />
   <link rel="alternate" href="https://chooco13.github.io/index.xml" type="application/rss+xml" title="chooco13"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
@@ -214,7 +219,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="posts-heading">
               
-                <h1>210910 리사이클러뷰에 롱클릭 이벤트 처리하기 (android - kotlin)</h1>
+                <h1>210926 로그인 하려면 SMS 인증해야 하는 사이트 자동화 처리 해보기</h1>
               
               
                 <hr class="small">
@@ -234,72 +239,77 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>개발하면서 시안만 정리해두고 작성은 마무리 안해둬서 이제야 마무리 해서 작성&hellip;</p>
-<p>카카오톡처럼 리스트의 아이템을 롱클릭을 하면 팝업 메뉴가 뜨게 하고 싶었다</p>
-<p>어떻게 할까 하다가
-결국은 그냥 viewholder에서 longclicklistener를 clicklistener와 나란히 사용해주었다.</p>
-<pre tabindex="0"><code>val customerAdapter = CustomerAdapter(
-    { customer -&gt; adapterOnClick(customer) },
-    { customer -&gt; adapterOnLongClick(customer) }
-)
-</code></pre><pre tabindex="0"><code>private fun adapterOnClick(customer: Customer) {
-    // 기능 작성
-}
+        <p>평소에 크롤링을 하던 사이트가 있는데<br>
+ID, PW를 입력하는 방식에서 번호인증 방식으로 바뀌었다.</p>
+<p>그래서 어떻게 하면 자동화 해볼수 있을까 하다가
+그냥 무식한 방법으로 진행 해보았다.</p>
+<ol>
+<li>
+<p>인증서버에 인증키를 요청한다. 그 후 토큰을 보관해 둔다. (나는 파이어베이스에다 보관해두었다.)</p>
+</li>
+<li>
+<p>핸드폰에 온 인증을 안드로이드에서 브로드캐스트리시버를 통해 받은 후 본인의 서버에 인증번호를 보낸다.</p>
+</li>
+</ol>
+<pre tabindex="0"><code>class SMSReceiver : BroadcastReceiver() {
+    override fun onReceive(context: Context?, intent: Intent) {
+        if (intent.action.equals(Telephony.Sms.Intents.SMS_RECEIVED_ACTION)) {
+            val smsMessages = Telephony.Sms.Intents.getMessagesFromIntent(intent)
+            for (message in smsMessages) {
+                val sender: String? = message.originatingAddress
+                val content: String = message.messageBody.toString()
+                val date = message.timestampMillis
+                Log.d(
+                    SMSReceiver::javaClass.name,
+                    String.format(&quot;{sender: %s, content: \&quot;%s\&quot;, date: %s}&quot;, sender, content, date)
+                    // {sender: xxx, content: [xxx] 본인확인 인증번호[xxx]를 화면에 입력해주세요, date: 1632705827000}
+                )
 
-private fun adapterOnLongClick(customer: Customer): Boolean {
-    // 기능 작성
+                if (sender.equals(&quot;xxx&quot;)) {
+                    var pattern = Pattern.compile(&quot;\\[(.*?)\\]&quot;)
+                    var matcher = pattern.matcher(content)
 
-    // 일반적인 클릭도 처리할지 말지 정하는 부분
-    // false를 return 할경우 일반 클릭도 수행하도록 넘어감
-    return true
-}
-</code></pre><pre tabindex="0"><code>class CustomerAdapter(private val onClick: (Customer) -&gt; Unit, private val onLongClick: (Customer) -&gt; Boolean) :
+                    matcher.find()
+                    var src = matcher.group(1)
+                    matcher.find()
+                    var certNumber = matcher.group(1)
 
-    class ViewHolder(itemView: View, val onClick: (Customer) -&gt; Unit, val onLongClick: (Customer) -&gt; Boolean) : RecyclerView.ViewHolder(itemView) {
-        
-        // 생략
+                    Log.d(
+                        SMSReceiver::javaClass.name,
+                        String.format(&quot;{src: \&quot;%s\&quot;, token: \&quot;%s\&quot;}&quot;, src, certNumber)
+                    )
+                    var certCallbackBody = CertCallbackBody(src, certNumber)
 
-        init {
-            itemView.setOnClickListener {
-                currentCustomer?.let {
-                    onClick(it)
+                    val retrofit = Retrofit.Builder()
+                        .baseUrl(&quot;본인의 서버 주소&quot;)
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build()
+
+                    val service: XXXService = retrofit.create(XXXService::class.java)
+                    service.callback(certCallbackBody).enqueue(object : Callback&lt;Void&gt; {
+                        override fun onResponse(call: Call&lt;Void&gt;, response: Response&lt;Void&gt;) {
+                        }
+
+                        override fun onFailure(call: Call&lt;Void&gt;, t: Throwable) {
+                        }
+                    })
                 }
             }
-
-            itemView.setOnLongClickListener {
-                onLongClick(currentCustomer!!)
-            }
         }
-
-        // 생략
-
     }
-
 }
-</code></pre><p>kotlin을 애매하게 알다보니 너무 모르는 것이 많다.<br>
-아래 개념들도 공부해둬야 할 것 같다.</p>
-<p>apply,let,with,also,run
-<a href="https://medium.com/@limgyumin/%EC%BD%94%ED%8B%80%EB%A6%B0-%EC%9D%98-apply-with-let-also-run-%EC%9D%80-%EC%96%B8%EC%A0%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EA%B0%80-4a517292df29">https://medium.com/@limgyumin/%EC%BD%94%ED%8B%80%EB%A6%B0-%EC%9D%98-apply-with-let-also-run-%EC%9D%80-%EC%96%B8%EC%A0%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EA%B0%80-4a517292df29</a></p>
+</code></pre><ol start="3">
+<li>인증번호와 토큰을 이용하여 다시 인증서버에 인증을 요청한다.</li>
+</ol>
+<p>끝</p>
 
 
         
           <div class="blog-tags">
             
-              <a href="https://chooco13.github.io/tags/%EB%A6%AC%EC%82%AC%EC%9D%B4%ED%81%B4%EB%9F%AC%EB%B7%B0/">리사이클러뷰</a>&nbsp;
+              <a href="https://chooco13.github.io/tags/sms-%EC%9D%B8%EC%A6%9D-%EC%9E%90%EB%8F%99%ED%99%94/">SMS 인증 자동화</a>&nbsp;
             
-              <a href="https://chooco13.github.io/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C/">안드로이드</a>&nbsp;
-            
-              <a href="https://chooco13.github.io/tags/%EC%BD%94%ED%8B%80%EB%A6%B0/">코틀린</a>&nbsp;
-            
-              <a href="https://chooco13.github.io/tags/%EB%A1%B1%ED%81%B4%EB%A6%AD/">롱클릭</a>&nbsp;
-            
-              <a href="https://chooco13.github.io/tags/recyclerview/">recyclerview</a>&nbsp;
-            
-              <a href="https://chooco13.github.io/tags/android/">android</a>&nbsp;
-            
-              <a href="https://chooco13.github.io/tags/kotlin/">kotlin</a>&nbsp;
-            
-              <a href="https://chooco13.github.io/tags/longclick/">longclick</a>&nbsp;
+              <a href="https://chooco13.github.io/tags/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%9E%90%EB%8F%99%ED%99%94/">사이트 자동화</a>&nbsp;
             
           </div>
         
@@ -313,13 +323,9 @@ private fun adapterOnLongClick(customer: Customer): Boolean {
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://chooco13.github.io/posts/210907-2/" data-toggle="tooltip" data-placement="top" title="210907 actions-hugo 이용해서 배포 자동화 중 생긴 이슈">&larr; 이전 글</a>
+              <a href="https://chooco13.github.io/posts/210910/" data-toggle="tooltip" data-placement="top" title="210910 리사이클러뷰에 롱클릭 이벤트 처리하기 (android - kotlin)">&larr; 이전 글</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://chooco13.github.io/posts/210926/" data-toggle="tooltip" data-placement="top" title="210926 로그인 하려면 SMS 인증해야 하는 사이트 자동화 처리 해보기">다음 글 &rarr;</a>
-            </li>
           
         </ul>
       

@@ -179,6 +179,56 @@ if (!doNotTrack) {
           
           
             <article class="post-preview">
+    <a href="https://chooco13.github.io/posts/210926/">
+        <h2 class="post-title">210926 로그인 하려면 SMS 인증해야 하는 사이트 자동화 처리 해보기</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;2021년 9월 26일에 게시됨
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        평소에 크롤링을 하던 사이트가 있는데
+ID, PW를 입력하는 방식에서 번호인증 방식으로 바뀌었다.
+그래서 어떻게 하면 자동화 해볼수 있을까 하다가 그냥 무식한 방법으로 진행 해보았다.
+  인증서버에 인증키를 요청한다. 그 후 토큰을 보관해 둔다. (나는 파이어베이스에다 보관해두었다.)
+  핸드폰에 온 인증을 안드로이드에서 브로드캐스트리시버를 통해 받은 후 본인의 서버에 인증번호를 보낸다.
+  class SMSReceiver : BroadcastReceiver() { override fun onReceive(context: Context?, intent: Intent) { if (intent.action.equals(Telephony.Sms.Intents.SMS_RECEIVED_ACTION)) { val smsMessages = Telephony.
+        <a href="https://chooco13.github.io/posts/210926/" class="post-read-more">[더 읽기]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://chooco13.github.io/tags/sms-%EC%9D%B8%EC%A6%9D-%EC%9E%90%EB%8F%99%ED%99%94/">SMS 인증 자동화</a>&nbsp;
+        
+        <a href="https://chooco13.github.io/tags/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%9E%90%EB%8F%99%ED%99%94/">사이트 자동화</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="https://chooco13.github.io/posts/210910/">
         <h2 class="post-title">210910 리사이클러뷰에 롱클릭 이벤트 처리하기 (android - kotlin)</h2>
         
@@ -190,7 +240,7 @@ if (!doNotTrack) {
         <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;
+  <i class="fas fa-calendar"></i>&nbsp;2021년 9월 10일에 게시됨
   
   
   
@@ -250,7 +300,7 @@ val customerAdapter = CustomerAdapter( { customer -&gt; adapterOnClick(customer)
         <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;
+  <i class="fas fa-calendar"></i>&nbsp;2021년 9월 7일에 게시됨
   
   
   
@@ -310,7 +360,7 @@ minify 옵션이 있는게 좀 더 가볍긴 하겠지만 깨지는것보다는 
         <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;
+  <i class="fas fa-calendar"></i>&nbsp;2021년 9월 7일에 게시됨
   
   
   
