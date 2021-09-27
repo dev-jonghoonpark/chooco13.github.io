@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>workflows on chooco13</title>
+    <link>https://chooco13.github.io/tags/workflows/</link>
+    <description>Recent content in workflows on chooco13</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 07 Sep 2021 17:13:39 +0900</lastBuildDate><atom:link href="https://chooco13.github.io/tags/workflows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>210907 actions-hugo 이용해서 배포 자동화 중 생긴 이슈</title>
+      <link>https://chooco13.github.io/posts/210907-2/</link>
+      <pubDate>Tue, 07 Sep 2021 17:13:39 +0900</pubDate>
+      
+      <guid>https://chooco13.github.io/posts/210907-2/</guid>
+      <description>actions-hugo 를 이용해서 commit이 있을 경우 ./public 폴더의 내용만 따로 gh-pages 브랜치에 배포되도록 처리하였다.
+그런데 로컬에서는 문제없이 잘 되는데 이상하게 actions-hugo를 거치면 메인 화면이 계속 깨지는 현상이 있었다.
+이 문제를 해결하기 위해 github actions 설정 파일과 배포 로그를 살펴보았더니 명령어에 --minify 옵션이 들어가 있던걸 볼 수 있었다.
+이유는 모르겠지만 minify 옵션을 처리하는 중 깨지는 이슈가 있는듯&amp;hellip;
+해당 옵션을 빼주니깐 글이 잘 보인다.
+minify 옵션이 있는게 좀 더 가볍긴 하겠지만 깨지는것보다는 나으니깐 그냥 배포하는걸로 하렵니다&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

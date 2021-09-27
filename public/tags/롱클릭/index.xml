@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>롱클릭 on chooco13</title>
+    <link>https://chooco13.github.io/tags/%EB%A1%B1%ED%81%B4%EB%A6%AD/</link>
+    <description>Recent content in 롱클릭 on chooco13</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 10 Sep 2021 17:13:39 +0900</lastBuildDate><atom:link href="https://chooco13.github.io/tags/%EB%A1%B1%ED%81%B4%EB%A6%AD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>210910 리사이클러뷰에 롱클릭 이벤트 처리하기 (android - kotlin)</title>
+      <link>https://chooco13.github.io/posts/210910/</link>
+      <pubDate>Fri, 10 Sep 2021 17:13:39 +0900</pubDate>
+      
+      <guid>https://chooco13.github.io/posts/210910/</guid>
+      <description>개발하면서 시안만 정리해두고 작성은 마무리 안해둬서 이제야 마무리 해서 작성&amp;hellip;
+카카오톡처럼 리스트의 아이템을 롱클릭을 하면 팝업 메뉴가 뜨게 하고 싶었다
+어떻게 할까 하다가 결국은 그냥 viewholder에서 longclicklistener를 clicklistener와 나란히 사용해주었다.
+val customerAdapter = CustomerAdapter({ customer -&amp;gt; adapterOnClick(customer) },{ customer -&amp;gt; adapterOnLongClick(customer) })private fun adapterOnClick(customer: Customer) {// 기능 작성}private fun adapterOnLongClick(customer: Customer): Boolean {// 기능 작성// 일반적인 클릭도 처리할지 말지 정하는 부분// false를 return 할경우 일반 클릭도 수행하도록 넘어감return true}class CustomerAdapter(private val onClick: (Customer) -&amp;gt; Unit, private val onLongClick: (Customer) -&amp;gt; Boolean) :class ViewHolder(itemView: View, val onClick: (Customer) -&amp;gt; Unit, val onLongClick: (Customer) -&amp;gt; Boolean) : RecyclerView.</description>
+    </item>
+    
+  </channel>
+</rss>
