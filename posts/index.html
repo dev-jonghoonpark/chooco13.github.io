@@ -177,6 +177,66 @@ if (!doNotTrack) {
         <div class="posts-list">
           
             <article class="post-preview">
+    <a href="https://chooco13.github.io/posts/210910/">
+        <h2 class="post-title">210910 리사이클러뷰에 롱클릭 이벤트 처리하기 (android - kotlin)</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        개발하면서 시안만 정리해두고 작성은 마무리 안해둬서 이제야 마무리 해서 작성&hellip;
+카카오톡처럼 리스트의 아이템을 롱클릭을 하면 팝업 메뉴가 뜨게 하고 싶었다
+어떻게 할까 하다가 결국은 그냥 viewholder에서 longclicklistener를 clicklistener와 나란히 사용해주었다.
+val customerAdapter = CustomerAdapter( { customer -&gt; adapterOnClick(customer) }, { customer -&gt; adapterOnLongClick(customer) } ) private fun adapterOnClick(customer: Customer) { // 기능 작성 } private fun adapterOnLongClick(customer: Customer): Boolean { // 기능 작성 // 일반적인 클릭도 처리할지 말지 정하는 부분 // false를 return 할경우 일반 클릭도 수행하도록 넘어감 return true } class CustomerAdapter(private val onClick: (Customer) -&gt; Unit, private val onLongClick: (Customer) -&gt; Boolean) : class ViewHolder(itemView: View, val onClick: (Customer) -&gt; Unit, val onLongClick: (Customer) -&gt; Boolean) : RecyclerView.
+        <a href="https://chooco13.github.io/posts/210910/" class="post-read-more">[더 읽기]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://chooco13.github.io/tags/%EB%A6%AC%EC%82%AC%EC%9D%B4%ED%81%B4%EB%9F%AC%EB%B7%B0/">리사이클러뷰</a>&nbsp;
+        
+        <a href="https://chooco13.github.io/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C/">안드로이드</a>&nbsp;
+        
+        <a href="https://chooco13.github.io/tags/%EC%BD%94%ED%8B%80%EB%A6%B0/">코틀린</a>&nbsp;
+        
+        <a href="https://chooco13.github.io/tags/%EB%A1%B1%ED%81%B4%EB%A6%AD/">롱클릭</a>&nbsp;
+        
+        <a href="https://chooco13.github.io/tags/recyclerview/">recyclerview</a>&nbsp;
+        
+        <a href="https://chooco13.github.io/tags/android/">android</a>&nbsp;
+        
+        <a href="https://chooco13.github.io/tags/kotlin/">kotlin</a>&nbsp;
+        
+        <a href="https://chooco13.github.io/tags/longclick/">longclick</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="https://chooco13.github.io/posts/210907-2/">
         <h2 class="post-title">210907 actions-hugo 이용해서 배포 자동화 중 생긴 이슈</h2>
         
